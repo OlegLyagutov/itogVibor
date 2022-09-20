@@ -24,13 +24,17 @@ Console.WriteLine($"[{String.Join(", ", array)}]");
 
 newArray = array;
 var result = new string[array.Length];
+
 for (var i = 0; i < newArray.Length; i++)
+{
     if (newArray.Length <= 3)
     {
         result[i] = newArray[i];
         i++;
     }
+}
 Console.WriteLine($"[{String.Join(", ", result)}]");
+
 
 
 
