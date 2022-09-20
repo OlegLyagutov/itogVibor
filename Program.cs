@@ -13,10 +13,8 @@
 Console.WriteLine("Введите размер массива через пробел от 1 до N: ");
 string[] array;
 string elements = Console.ReadLine();
-
 array = elements.Split(" ");
-
-string[] newArray = new string[array.Length];
+string[] newArray;
 for (int i = 0; i < array.Length; i++)
 {
     Console.WriteLine($"Введите {i+1} элемент:");
@@ -24,14 +22,16 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.WriteLine($"[{String.Join(", ", array)}]");
 
-//string[] newArray;
-if (array.Length <= 3)
-{
-   int i = 0;
-   Console.WriteLine($"[{String.Join(", ", newArray)}]");;
-   i++;
-} 
-//Console.WriteLine($"[{String.Join(", ", newArray)}]");
-Console.ReadLine();
+newArray = array;
+var result = new string[array.Length];
+for (var i = 0; i < newArray.Length; i++)
+    if (newArray.Length <= 3)
+    {
+        result[i] = newArray[i];
+        i++;
+    }
+Console.WriteLine($"[{String.Join(", ", result)}]");
+
+
 
 
