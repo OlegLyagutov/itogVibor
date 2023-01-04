@@ -10,32 +10,40 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-Console.WriteLine("Введите размер массива через пробел от 1 до N: ");
-string[] array;
-string elements = Console.ReadLine();
-array = elements.Split(" ");
-string[] newArray;
-for (int i = 0; i < array.Length; i++)
-{
-    Console.WriteLine($"Введите {i+1} элемент:");
-    array[i] = Console.ReadLine();
-}
-Console.WriteLine($"[{String.Join(", ", array)}]");
 
-newArray = array;
-var result = new string[array.Length];
 
-for (var i = 0; i < newArray.Length; i++)
+string[] array = new string[] { "Hello", "132", "Russia", "4", "Yes" };
+
+void PrintArray(string[] Array)
 {
-    if (newArray.Length <= 3)
+
+    for (int i = 0; i < Array.Length; i++)
     {
-        result[i] = newArray[i];
-        i++;
+        Console.Write($"{Array[i]} ");
+    }
+    Console.WriteLine();
+}
+
+void Resultarray(string[] Array)
+{
+       for (int i = 0; i < Array.Length; i++)
+    {
+        string element = Array[i];
+        if (element.Length <= 3)
+        {
+            Array[i] = element;
+        }
+        else Array[i] =  string.Empty;
+
     }
 }
-Console.WriteLine($"[{String.Join(", ", result)}]");
 
+PrintArray(array);
 
+Resultarray(array);
 
+Console.WriteLine(" ");
+
+PrintArray(array);
 
 
