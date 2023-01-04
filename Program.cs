@@ -24,7 +24,7 @@ void PrintArray(string[] Array)
     Console.WriteLine();
 }
 
-void Resultarray(string[] Array)
+void arrayResult(string[] Array)
 {
        for (int i = 0; i < Array.Length; i++)
     {
@@ -40,7 +40,7 @@ void Resultarray(string[] Array)
 
 PrintArray(array);
 
-Resultarray(array);
+arrayResult(array);
 
 Console.WriteLine(" ");
 
